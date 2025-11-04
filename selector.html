@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+       ul{
+            list-style:none;
+            display: flex;
+        }
+        ul li{
+            margin-right: 20px;
+            background-color: lightgray;
+            padding: 10px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul li:nth-child (5){
+            border-right: 0px;
+        }
+        ul li::first-letter{
+            color: blue;
+        }
+
+        
+        a:link{
+            text-decoration: none;font-size: 20px;
+        }
+        a :hover{
+            color: brown;
+        }
+        a :active{
+            color: chocolate;
+        }
+        a :visited{
+            color:beige
+        }
+        #box p{
+            color: blueviolet;
+        }
+        #box>p{
+            color: cadetblue;
+        }
+
+          
+    </style>
+</head>
+<body>
+
+  <div id="box">
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore tenetur debitis
+         eum nesciunt illo nihil, veniam voluptatibus ut similique eveniet molestiae corporis 
+         at, accusantium odio velit eligendi blanditiis, natus dolores.
+        </p>
+         <div>
+         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos consequuntur natus illo voluptas odio, omnis iusto 
+            ea voluptatum nesciunt? Corrupti mollitia quos temporibus minus reiciendis numquam autem. Perspiciatis, vitae neque!
+         </p>
+         </div>
+  </div>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam aliquam dolores, nihil accusantium reprehenderit 
+      optio mollitia debitis tempore, iusto alias nisi vitae eveniet animi repudiandae sequi voluptatum labore eos.
+    </p>
+    <h3>Abes Engeering College </h3>
+    <h3>
+        <a href="https://www.abes.ac.in/">open link</a>
+    </h3><ul><li>C</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+    </ul>
+        
+
+    
+</body>
+</html>
