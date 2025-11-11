@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('Screenshot 2025-11-06 114056.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+    background-position: top right 40px;
+    background-size: cover;
+    
+}
+html,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    font-style: italic;
+    
+}
+img{
+    float: left;
+    margin-right: 20px;
+
+}
