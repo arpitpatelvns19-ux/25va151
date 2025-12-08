@@ -1,1 +1,236 @@
-dshgdahgyfd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deals – ShopEase</title>
+
+    <style>
+        /* --- General Reset & Base Styling --- */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* --- Navbar Styles (same strip as other pages) --- */
+        nav {
+            width: 100%;
+            background: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1abc9c;
+        }
+
+        .menu-icon {
+            font-size: 1.8em;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #34495e;
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px 0;
+                display: none;
+                text-align: center;
+                z-index: 10;
+            }
+
+            #menu-toggle:checked ~ .nav-links {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        /* --- Page Headings --- */
+        h1{
+            margin-top: 30px;
+            font-size: 32px;
+        }
+
+        /* --- Product Grid --- */
+        .product-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 40px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .card{
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-decoration: none;
+            color: black;
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            display: block;
+        }
+
+        /* remove hover effect completely */
+        .card:hover{
+            box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+            transform: none;
+            cursor: default;
+        }
+
+        .image-box{
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .image-box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title{
+            font-size: 20px;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #0000cc;
+            text-decoration: underline;
+            transition: 0.2s;
+        }
+
+        /* Hover effect only on TITLE, not on card */
+        .title:hover{
+            color: #ff6600;
+        }
+
+        .price{
+            margin-top: 5px;
+            font-size: 17px;
+            color: #444;
+        }
+
+        /* --- Back to Home Button --- */
+        .back-home {
+            display: inline-block;
+            margin: 10px 0 30px;
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: #ffffff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95em;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .back-home:hover {
+            background: #1abc9c;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR STRIP -->
+    <nav>
+        <div class="logo">ShopEase</div>
+
+        <input type="checkbox" id="menu-toggle" style="display:none;">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <div class="nav-links">
+            <a href="Experiment_10.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="Experiment_9.html">Deals</a>
+            <a href="cart.html">Cart</a>
+            <a href="Experiment_8.html">Profile</a>
+        </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <h1><u>Responsive Product Grid</u></h1>
+    <h2>Daily Price Drops! 🔥</h2>
+    <p><i><b>Welcome to the Deals Zone! For a limited time, enjoy a flat ₹399 discount on the products below. Grab these items before the timer runs out!</b></i></p>
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <a href="sneakers.html" class="card">
+            <div class="image-box">
+                <img src="sneakers.webp" alt="Sneakers">
+            </div>
+            <div class="title">Sneakers</div>
+            <div class="price"><strike>₹1799/-</strike> ₹1400/-</div>
+        </a>
+
+        <!-- PRODUCT 2 -->
+        <a href="watch.html" class="card">
+            <div class="image-box">
+                <img src="Watch.webp" alt="Watch">
+            </div>
+            <div class="title">Watch</div>
+            <div class="price"><strike>₹1299/-</strike> ₹900/-</div>
+        </a>
+
+        <!-- PRODUCT 3 -->
+        <a href="headphones.html" class="card">
+            <div class="image-box">
+                <img src="Headphones.webp" alt="Headphones">
+            </div>
+            <div class="title">Headphones</div>
+            <div class="price"><strike>₹1999/-</strike> ₹1600/-</div>
+        </a>
+
+        <!-- PRODUCT 4 -->
+        <a href="backpack.html" class="card">
+            <div class="image-box">
+                <img src="Backpack.jpeg" alt="Backpack">
+            </div>
+            <div class="title">Backpack</div>
+            <div class="price"><strike>₹1398/-</strike> ₹999/-</div>
+        </a>
+
+    </div>
+
+    <!-- NEW DESIGNED BACK BUTTON -->
+    <a href="Experiment_10.html" class="back-home">← Back to Home</a>
+    
+</body>
+</html>
