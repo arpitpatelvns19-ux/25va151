@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Grid</title>
+
+<style>
+body{margin:0;background:#e9eef5;font-family:sans-serif;}
+h1{text-align:center;margin:20px 0;}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    padding:20px;
+}
+.card{
+    background:#ccccef;
+    padding:10px;
+    text-align:center;
+    border-radius:10px;
+}
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Responsive Product Grid</h1>
+
+<div class="grid">
+
+<div class="card">
+<img src="vivot4.jpg" alt="vivo">
+<h2>Vivo T4x 5g</h2>
+<p>50MP + 2MP | 8MP<br>6500mAh | Dimensity 7300</p>
+<h3>&#8377; 15,999</h3>
+</div>
+
+<div class="card">
+<img src="realmep3.jpg" alt="realme">
+<h2>Realme P3 5g</h2>
+<p>50MP + 2MP | 16MP<br>6000mAh | SD 6 Gen 4</p>
+<h3>&#8377; 16,999</h3>
+</div>
+
+<div class="card">
+<img src="Redmi13.jpg" alt="redmi">
+<h2>Redmi 13 5g</h2>
+<p>108MP Rear<br>5030mAh | SD 4 Gen 2</p>
+<h3>&#8377; 13,999</h3>
+</div>
+
+<div class="card">
+<img src="samsunga35.jpg" alt="samsung">
+<h2>Samsung A35 5g</h2>
+<p>13MP Front<br>5000mAh | Exynos 1380</p>
+<h3>&#8377; 18,999</h3>
+</div>
+
+</div>
+</body>
+</html>
