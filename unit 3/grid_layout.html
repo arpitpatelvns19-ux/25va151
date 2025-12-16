@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Best Version</title>
+
+    <style>
+        
+
+        body {
+            background:;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            width: 1200px;
+            max-width: 95%;
+            margin: 0px auto;
+            display: grid;
+
+        
+            grid-template-rows:100px 130px 100px 400px 80px ;
+            gap: 10px;
+        }
+
+    
+        #logo, header, article, footer {
+            background: #ccc;
+            padding: 20px;
+            display: grid;
+            place-items: center;
+            
+            border-radius: 5px;
+        }
+
+    
+        #box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .boxes {
+            background: #999;
+            padding: 40px ;
+            display: grid;
+            place-items: center;
+            border-radius: 5px;
+        }
+
+        
+    
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="logo"><h2>Logo</h2></div>
+        <header><h2>Header</h2></header>
+        <article><h2>Text Area</h2></article>
+
+        <div id="box">
+            <div class="boxes"><h2>Box1</h2></div>
+            <div class="boxes"><h2>Box2</h2></div>
+            <div class="boxes"><h2>Box3</h2></div>
+        </div>
+
+        <footer><h2>Footer</h2></footer>
+    </main>
+</body>
+</html>
