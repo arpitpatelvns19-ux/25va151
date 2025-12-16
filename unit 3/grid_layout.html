@@ -9,17 +9,16 @@
         
 
         body {
-            background:black;
+            background:rgb(240, 235, 235);
             font-family: Arial, sans-serif;
         }
 
         main {
             width: 1200px;
             max-width: 95%;
-            margin:  auto;
+            margin: 0 auto;
             display: grid;
-
-        
+            grid-template-columns: 1fr;
             grid-template-rows:100px 130px 100px 400px 80px ;
             gap: 10px;
         }
@@ -30,14 +29,14 @@
             padding: 20px;
             display: grid;
             place-items: center;
-            
             border-radius: 5px;
         }
 
     
         #box {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            grid-template-columns: auto auto auto auto;
             gap: 10px;
         }
 
@@ -64,7 +63,8 @@
             <div class="boxes"><h1>box1</h1></div>
             <div class="boxes"><h1>box2</h1></div>
             <div class="boxes"><h1>box3</h1></div>
-            <div claas="boxes"><h1>box4</h1></div>
+            <div class="boxes"><h1>box4</h1></div>
+            
         </div>
 
         <footer><h2>Footer</h2></footer>
