@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Clone</title>
+
+<style>
+html,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #131921;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 150px 1fr repeat(3, 120px);
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ===== COMMON SECTION ===== */
+header,#banner,#about,#services,#gallery,footer{
+    background-color: #eaeaea;
+    padding: 15px;
+    width: 1200px;
+    margin: 15px auto;
+}
+
+/* space for fixed navbar */
+header{
+    margin-top: 80px;
+}
+
+/* ===== HEADER ===== */
+header{
+    background: #232f3e;
+    color: white;
+    display: grid;
+    align-items: center;
+}
+
+/* ===== BANNER ===== */
+#banner{
+    background: linear-gradient(#f3f3f3, #ddd);
+    display: grid;
+    place-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    height: 300px;
+}
+
+/* ===== PRODUCT SECTIONS ===== */
+#about,#services,#gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: grid;
+    gap: 10px;
+}
+
+.card .img{
+    height: 150px;
+}
+
+.card .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card button{
+    padding: 6px;
+    background: #ffd814;
+    border: 1px solid #fcd200;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background: #131921;
+    color: white;
+    display: grid;
+    place-items: center;
+    height: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <ul>
+        <li><a href="#">amazon</a></li>
+        <li><input type="text" placeholder="Search Amazon" style="width:100%;padding:6px"></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Cart</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h2>Deliver to India</h2>
+</header>
+
+<div id="banner">
+    Amazon Great Indian Sale
+</div>
+
+<div id="about">
+    <div class="card"><h4>Electronics</h4><div class="img"><img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Mobiles</h4><div class="img"><img src="https://m.media-amazon.com/images/I/71d1ytcCntL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Fashion</h4><div class="img"><img src="https://m.media-amazon.com/images/I/71li-ujtlUL._AC_UY218_.jpg"></div><button>Add</button></div>
+</div>
+
+<div id="services">
+    <div class="card"><h4>Laptops</h4><div class="img"><img src="https://m.media-amazon.com/images/I/71an9eiBxpL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Headphones</h4><div class="img"><img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Watches</h4><div class="img"><img src="https://m.media-amazon.com/images/I/71xj8v0yqQL._AC_UY218_.jpg"></div><button>Add</button></div>
+</div>
+
+<div id="gallery">
+    <div class="card"><h4>Books</h4><div class="img"><img src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Toys</h4><div class="img"><img src="https://m.media-amazon.com/images/I/71k5nR-l+SL._AC_UY218_.jpg"></div><button>Add</button></div>
+    <div class="card"><h4>Beauty</h4><div class="img"><img src="https://m.media-amazon.com/images/I/61fq5P-yXkL._AC_UY218_.jpg"></div><button>Add</button></div>
+</div>
+
+<footer>
+    © 2025 Amazon Clone
+</footer>
+
+</body>
+</html>
