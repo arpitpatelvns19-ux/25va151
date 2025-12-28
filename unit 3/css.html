@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inherit and Opacity Example</title>
+
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow:auto;
+        color: #a44141;
+        .parent {
+            border: 10px solid transparent;
+            border-image: url(watch.jpg) 90 stretch;
+                        color: white;
+            background-color: blue;
+            padding: 20px;
+            opacity: 0.7;  
+            background-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+        }
+        .child {
+            color: inherit;  
+             border-image: url(watch.jpg) 90 stretch;
+            background-color: red;
+            padding: 10px;
+        }
+        .child2 {
+            color: inherit;
+            background-color: green;
+            padding: 10px;
+            opacity: 0.5; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        Parent Div lorem ipsum dolor sit amet, consectetur adipiscing elit.lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        
+
+        <div class="child">
+            Child Div Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium qui blanditiis fuga dolore ex atque
+             ratione accusantium eius modi et, doloribus repellat porro dolor, repellendus aut minus placeat delectus.
+        </div>
+
+        <div class="child2">
+            Child Div 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum voluptates quasi 
+            ipsam officia laudantium inventore quam, quae enim et necessitatibus fuga incidunt placeat iste libero?
+             Quam laborum eveniet rem?
+        </div>
+    </div>
+
+</body>
+</html>
