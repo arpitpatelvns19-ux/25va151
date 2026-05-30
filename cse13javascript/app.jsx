@@ -39,7 +39,7 @@ function App() {
             }}
           />
 
-          <p> MOUNTAIN VIEW</p>
+          <p> MOUNTAIN  VIEW</p>
         </div>
 
         {/* Card 2 */}
