@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechStore</title>
     <link rel="stylesheet" href="project.css">
 </head>
@@ -8,67 +10,84 @@
 <body>
 
 <header>
+
     <h1>TechStore</h1>
 
-    <input type="text" id="search" placeholder="Search Products">
-
-    <button onclick="searchProduct()">Find</button>
-
-    <div>
-        Cart: <span id="cartCount">0</span>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Products">
+        <button onclick="searchProduct()">Search</button>
     </div>
+
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒 Cart (<span id="cartCount">0</span>)
+    </div>
+
 </header>
 
-<hr>
-
 <nav>
-    <span>Mobiles</span> |
-    <span>Laptops</span> |
-    <span>Accessories</span> |
-    <span>Gaming</span>
+    <a href="#">Mobiles</a>
+    <a href="#">Laptops</a>
+    <a href="#">Accessories</a>
+    <a href="#">Gaming</a>
 </nav>
 
-<section>
+<section class="hero">
     <h2>Welcome to TechStore</h2>
     <p>Best gadgets at affordable prices.</p>
 </section>
 
-<h2>Featured Products</h2>
+<h2 class="title">Featured Products</h2>
 
 <div class="products">
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" width="200">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400">
         <h3>Bluetooth Headphones</h3>
         <p>₹1999</p>
-        <button onclick="addCart()">Buy Now</button>
+        <button onclick="addCart('Bluetooth Headphones',1999)">Buy Now</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400" width="200">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400">
         <h3>Digital Watch</h3>
         <p>₹2999</p>
-        <button onclick="addCart()">Buy Now</button>
+        <button onclick="addCart('Digital Watch',2999)">Buy Now</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400" width="200">
+        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400">
         <h3>Gaming Laptop</h3>
         <p>₹49999</p>
-        <button onclick="addCart()">Buy Now</button>
+        <button onclick="addCart('Gaming Laptop',49999)">Buy Now</button>
     </div>
 
     <div class="card">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400" width="200">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400">
         <h3>Smartphone</h3>
         <p>₹14999</p>
-        <button onclick="addCart()">Buy Now</button>
+        <button onclick="addCart('Smartphone',14999)">Buy Now</button>
     </div>
 
 </div>
 
+<!-- CART -->
+
+<div id="cartBox" class="cart-box">
+
+    <h2>Your Cart</h2>
+
+    <ul id="cartItems"></ul>
+
+    <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+    <button onclick="toggleCart()">Close</button>
+
+</div>
+
 <footer>
+
     <p>© 2026 TechStore</p>
+
 </footer>
 
 <script src="project.js"></script>

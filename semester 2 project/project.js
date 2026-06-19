@@ -1,27 +1,78 @@
-let cart = 0;
+let cart = [];
+let total = 0;
 
+function addCart(name, price){
 
-function addCart(){
+    cart.push({
+        name:name,
+        price:price
+    });
 
-    cart++;
+    total += price;
 
-    document.getElementById("cartCount").innerHTML = cart;
-
-    alert("Product added to cart!");
+    updateCart();
 }
 
+function updateCart(){
 
+    document.getElementById("cartCount").innerHTML = cart.length;
+
+    document.getElementById("totalPrice").innerHTML = total;
+
+    let items = document.getElementById("cartItems");
+
+    items.innerHTML = "";
+
+    cart.forEach((item,index)=>{
+
+        items.innerHTML += `
+        <li>
+            <b>${item.name}</b><br>
+            ₹${item.price}
+
+            <button class="remove-btn"
+            onclick="removeItem(${index})">
+            Remove
+            </button>
+
+        </li>
+        `;
+
+    });
+
+}
+
+function removeItem(index){
+
+    total -= cart[index].price;
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+function toggleCart(){
+
+    document.getElementById("cartBox").classList.toggle("active");
+
+}
 
 function searchProduct(){
 
-    let value = document.getElementById("search").value;
+    let input=document.getElementById("search").value.toLowerCase();
 
-    if(value==""){
-        alert("Enter product name");
-    }
+    let cards=document.querySelectorAll(".card");
 
-    else{
-        alert("Searching for: " + value);
-    }
+    cards.forEach(card=>{
+
+        let title=card.querySelector("h3").innerText.toLowerCase();
+
+        if(title.includes(input))
+            card.style.display="block";
+        else
+            card.style.display="none";
+
+    });
 
 }
